@@ -32,7 +32,7 @@ footer {
 input[type="range"] {
   appearance: none;
   width: 200px;
-  height: 9px;
+  height: 8px;
   border-radius: 5px;
 }
 
@@ -41,7 +41,6 @@ input[type="range"] {
   height: 20px;
   background: black;
   border-radius: 8px;
-  border: 1px solid #ccc;
 }
 
 .selector-container {

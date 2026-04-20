@@ -7,14 +7,14 @@ body {
 }
 
 header {
-  background-color: #dfdfdf;
+  background-color: #caf0f8;
   display: flex;
   width: 100%;
   height: 50px;
   align-items: top;
   padding: 4px;
   padding-left: 20px;
-  border-bottom: 1px solid rgb(179, 179, 179);
+  border-bottom: 1px solid #ade8f4;
 }
 
 footer {
@@ -28,12 +28,11 @@ footer {
   font-size: 20px;
 }
 
-
 /* ===== COLOR PICKER ===== */
 input[type="range"] {
   appearance: none;
   width: 200px;
-  height: 9px;
+  height: 8px;
   border-radius: 5px;
 }
 
@@ -42,7 +41,6 @@ input[type="range"] {
   height: 20px;
   background: black;
   border-radius: 8px;
-  border: 1px solid #ccc;
 }
 
 .selector-container {

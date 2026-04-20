@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paleta de colores</title>
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/components/button.css"
   </head>
   <body>
     <header class="logo">
@@ -12,23 +13,21 @@
     </header>
     <main>
       <div class="color"></div>
-      
-      <input type="range" id="r" min="0" max="255">
+
+      <input type="range" id="r" min="0" max="255" />
       <span id="rValue">0</span>
-      <input type="range" id="g" min="0" max="255">
+      <input type="range" id="g" min="0" max="255" />
       <span id="gValue">0</span>
-      <input type="range" id="b" min="0" max="255">
+      <input type="range" id="b" min="0" max="255" />
       <span id="bValue">0</span>
 
       <div class="selector-container">
-      <button id="btnRGB">Usar RGB</button>
-      <div id="box"></div>      
-      
-      <input type="color" id="colorPicker">
-      <button id="btnPicker">Usar paleta</button>
+        <button id="btnRGB">Usar RGB</button>
+        <div id="box"></div>
+
+        <input type="color" id="colorPicker" />
+        <button id="btnPicker">Usar paleta</button>
       </div>
-
-
 
       <ul id="lista"></ul>
 

@@ -11,7 +11,7 @@ const bValue = document.querySelector("#bValue");
 
 btnRGB.addEventListener("click", () => {
   const color = `rgb(${r.value}, ${g.value}, ${b.value})`;
-  box.style.backgroundColor = color;
+  document.body.style.backgroundColor = color;
 
   const li = document.createElement("li");
   li.textContent = color;
@@ -22,7 +22,7 @@ btnRGB.addEventListener("click", () => {
 
 btnPicker.addEventListener("click", () => {
   const color = colorPicker.value;
-  box.style.backgroundColor = color;
+  document.body.style.backgroundColor = color;
 
   const li = document.createElement("li");
   li.textContent = color;
@@ -87,7 +87,7 @@ function actualizarColor() {
   const gVal = g.value;
   const bVal = b.value;
 
-  box.style.background = `rgb(${rVal}, ${gVal}, ${bVal})`;
+  document.body.style.background = `rgb(${rVal}, ${gVal}, ${bVal})`;
 }
 
 r.addEventListener("input", actualizarColor);

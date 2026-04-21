@@ -32,7 +32,7 @@ btnPicker.addEventListener("click", () => {
 });
 
 r.addEventListener("input", () => {
-  rValue.textContent = r.value;
+  rValue.value = r.value;
 });
 
 r.addEventListener("input", () => {
@@ -47,7 +47,7 @@ r.addEventListener("input", () => {
 });
 
 g.addEventListener("input", () => {
-  gValue.textContent = g.value;
+  gValue.value = g.value;
 });
 g.addEventListener("input", () => {
   const valor = g.value;
@@ -61,7 +61,7 @@ g.addEventListener("input", () => {
 });
 
 b.addEventListener("input", () => {
-  bValue.textContent = b.value;
+  bValue.value = b.value;
 });
 b.addEventListener("input", () => {
   const valor = b.value;
@@ -93,3 +93,18 @@ function actualizarColor() {
 r.addEventListener("input", actualizarColor);
 g.addEventListener("input", actualizarColor);
 b.addEventListener("input", actualizarColor);
+
+rValue.addEventListener("input", () => {
+  r.value = rValue.value;
+  actualizarColor();
+});
+
+gValue.addEventListener("input", () => {
+  g.value = gValue.value;
+  actualizarColor();
+});
+
+bValue.addEventListener("input", () => {
+  b.value = bValue.value;
+  actualizarColor();
+});

@@ -54,10 +54,27 @@ input[type="range"] {
   margin-top: 10px;
 }
 
-span {
+input[type="number"] {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  border: 0;
   background-color: #caf0f8;
+  width: 30px;
   padding: 4px 6px;
   border-radius: 8px;
   font-size: 14px;
   font-weight: 400;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border: 1px solid #0077b6;
+  color: #0077b6;
+  font-weight: 650;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

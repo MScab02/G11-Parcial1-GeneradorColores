@@ -95,16 +95,22 @@ g.addEventListener("input", actualizarColor);
 b.addEventListener("input", actualizarColor);
 
 rValue.addEventListener("input", () => {
+  if (rValue.value < 0) rValue.value = 0;
+  if (rValue.value > 255) rValue.value = 255;
   r.value = rValue.value;
   actualizarColor();
 });
 
 gValue.addEventListener("input", () => {
+  if (gValue.value < 0) gValue.value = 0;
+  if (gValue.value > 255) gValue.value = 255;
   g.value = gValue.value;
   actualizarColor();
 });
 
 bValue.addEventListener("input", () => {
+  if (bValue.value < 0) bValue.value = 0;
+  if (bValue.value > 255) bValue.value = 255;
   b.value = bValue.value;
   actualizarColor();
 });

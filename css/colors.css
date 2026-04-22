@@ -70,3 +70,10 @@
     left: 66%
 
 }
+
+.green-expansion
+{
+    transform: scale(40);
+    top: 33%
+
+}

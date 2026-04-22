@@ -1,8 +1,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100vh; /* Viewport Height */
-  width: 100vw;  /* Viewport Width */
-  overflow: hidden; /* Prevents scrollbars */
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; 
   background-color: black;
 }

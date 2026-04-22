@@ -1,12 +1,16 @@
 .circle
 {
     position: fixed;
-    width: 40px;
-    height: 40px;
-    border: 1px solid;
-    border-color: black;
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color:rgb(0, 255, 0);
     border-radius: 100%;
-    top: -20px;
-    left: -20px;
+    top: -30px;
+    left: -30px;
     pointer-events: none;
+
+    mix-blend-mode:screen;
+
+    z-index: 1;
 }

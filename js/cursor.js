@@ -4,7 +4,7 @@ const mouse = {x:0, y:0};
 const circle = {x:0, y:0};
 const speed = 0.2;
 
-window.addEventListener('mousemove', e => {mouse.x = e.x; mouse.y = e.y;});
+window.addEventListener('mousemove', position => {mouse.x = position.x; mouse.y = position.y;});
 
 const tick = () => 
 {

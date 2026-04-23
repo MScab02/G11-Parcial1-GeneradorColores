@@ -1,0 +1,82 @@
+.expand
+{
+    position: fixed;
+    height: 100px;
+    width: 100px;
+
+    opacity: 0;
+
+    top: 48%;
+    left: 48%;
+
+    z-index: 2;
+    cursor: pointer;
+}
+
+.red
+{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+
+    border-radius: 100%;
+
+    top: 50%;
+    left: 48%;
+
+    background-color: rgb(255, 0, 0);
+
+    z-index: 1;
+
+    mix-blend-mode: screen;
+
+    transition: transform 2s ease, left 1.5s ease;
+    transform-origin: center center;
+
+}
+
+.blue
+{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+
+    border-radius: 100%;
+
+    top: 50%;
+    left: 50%;
+
+    background-color:rgb(0, 0, 255);
+
+    z-index: 1;
+
+    mix-blend-mode: screen;
+
+    transition: transform 2s ease, left 1.5s ease;
+    transform-origin: center center;
+
+}
+
+.red-expansion
+{
+    transform: scale(40);
+    left: 33%;
+
+}
+
+.blue-expansion
+{
+    transform: scale(40);
+    left: 66%
+
+}
+
+.green-expansion
+{
+    transition: transform 2s ease, top 1.5s ease, left 1.5s ease;
+
+    transform: scale(60);
+    left: 50%;
+    top: 33%
+
+}

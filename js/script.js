@@ -1,35 +1,51 @@
-const lista = document.querySelector("#lista");
-const btnPicker = document.querySelector("#btnPicker");
-const box = document.querySelector("#box");
+// Circulo dentro de panel que cambia de color
+const createColor = document.querySelector("#create-color");
+const header = document.querySelector("#header");
+// ---------------------------------------------
+// Boton que acepta colores
 const btnRGB = document.querySelector("#btnRGB");
+// Lista donde van colores elegidos
+const lista = document.querySelector("#lista");
+// ---------------------------------------------
+
+// ---------------------------------------------
+// Probablemente deprecado
+const btnPicker = document.querySelector("#btnPicker");
+// Nose que es
+const box = document.querySelector("#box");
+// ---------------------------------------------
+
+
+//
 const r = document.querySelector("#r");
 const g = document.querySelector("#g");
 const b = document.querySelector("#b");
+
+//
 const rValue = document.querySelector("#rValue");
 const gValue = document.querySelector("#gValue");
 const bValue = document.querySelector("#bValue");
 
+
+
 btnRGB.addEventListener("click", () => {
   const color = `rgb(${r.value}, ${g.value}, ${b.value})`;
-  document.body.style.backgroundColor = color;
+  const invertedColor = `rgb(${255 - r.value}, ${255 - g.value}, ${b.value})`; 
+
+  header.style.backgroundColor = color; 
+  header.style.color = invertedColor; 
+  //document.body.style.backgroundColor = color;
 
   const li = document.createElement("li");
   li.textContent = color;
   li.style.backgroundColor = color;
+  li.style.color = invertedColor;
+  
 
   lista.appendChild(li);
 });
 
-btnPicker.addEventListener("click", () => {
-  const color = colorPicker.value;
-  document.body.style.backgroundColor = color;
-
-  const li = document.createElement("li");
-  li.textContent = color;
-  li.style.backgroundColor = color;
-
-  lista.appendChild(li);
-});
+// SINGLE LETTERS STUFF (CREAR BARRA Y ACTUALIZAR VALOR DENTRO DEL INPUT)
 
 r.addEventListener("input", () => {
   rValue.value = r.value;
@@ -74,6 +90,9 @@ b.addEventListener("input", () => {
    `;
 });
 
+
+// Pinta los Sliders
+
 function pintarSliders() {
   r.style.background = `linear-gradient(to right, rgb(0,0,0), rgb(255,0,0))`;
   g.style.background = `linear-gradient(to right, rgb(0,0,0), rgb(0,255,0))`;
@@ -82,12 +101,16 @@ function pintarSliders() {
 
 pintarSliders();
 
+
+
 function actualizarColor() {
   const rVal = r.value;
   const gVal = g.value;
   const bVal = b.value;
 
-  document.body.style.background = `rgb(${rVal}, ${gVal}, ${bVal})`;
+  createColor.style.backgroundColor = `rgb(${rVal}, ${gVal}, ${bVal})`; 
+  createColor.style.borderColor = `rgb(${rVal - 20}, ${gVal - 20}, ${bVal - 20})`; 
+  //document.body.style.background = `rgb(${rVal}, ${gVal}, ${bVal})`;
 }
 
 r.addEventListener("input", actualizarColor);
@@ -114,3 +137,25 @@ bValue.addEventListener("input", () => {
   b.value = bValue.value;
   actualizarColor();
 });
+
+
+
+
+
+
+
+
+
+
+// --------------------------------------------- Deprecado? 
+btnPicker.addEventListener("click", () => {
+  const color = colorPicker.value;
+  //document.body.style.backgroundColor = color;
+
+  const li = document.createElement("li");
+  li.textContent = color;
+  li.style.backgroundColor = color;
+
+  lista.appendChild(li);
+});
+// --------------------------------------------- 

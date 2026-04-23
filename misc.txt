@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paleta de colores</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/components/button.css">
+  </head>
+
+  <button type="button" id="create-color"> create color</button>
+
+  body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+
+<div class="selectores">
+        <input type="range" id="r" min="0" max="255" value="255"/>
+        <input type="number" id="rValue" min="0" max="255" value="255"/>
+        <input type="range" id="g" min="0" max="255" value="255"/>
+        <input type="number" id="gValue" min="0" max="255" value="255"/>
+        <input type="range" id="b" min="0" max="255" value="255"/>
+        <input type="number" id="bValue" min="0" max="255" value="255"/>
+      </div>
+
+      <div class="selector-container">
+        <button id="btnRGB">Usar RGB</button>
+
+        <input type="color" id="colorPicker" />
+        <button id="btnPicker">Usar paleta</button>
+      </div>
+
+      <ul id="lista"></ul>
+
+      <script src="./js/script.js"></script>
+    </main>
+    <footer>
+      <p>2J3M - P3: Primer parcial - 2026</p>
+    </footer>
+  </body>
+</html>

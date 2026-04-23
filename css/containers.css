@@ -1,0 +1,29 @@
+.main-horizontal-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(245, 245, 245);
+
+    border: 1px solid;
+    border-color: rgb(205, 205, 205);
+    border-radius: 10px;
+
+    gap: 20px;
+    padding: 20px;
+}
+
+.horizontal-container
+{
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+.vertical-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}

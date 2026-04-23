@@ -10,11 +10,7 @@ const lista = document.querySelector("#lista");
 
 // ---------------------------------------------
 // Probablemente deprecado
-const btnPicker = document.querySelector("#btnPicker");
-// Nose que es
-const box = document.querySelector("#box");
-// ---------------------------------------------
-
+// const btnPicker = document.querySelector("#btnPicker");
 
 //
 const r = document.querySelector("#r");
@@ -26,21 +22,18 @@ const rValue = document.querySelector("#rValue");
 const gValue = document.querySelector("#gValue");
 const bValue = document.querySelector("#bValue");
 
-
-
 btnRGB.addEventListener("click", () => {
   const color = `rgb(${r.value}, ${g.value}, ${b.value})`;
-  const invertedColor = `rgb(${255 - r.value}, ${255 - g.value}, ${b.value})`; 
+  const invertedColor = `rgb(${255 - r.value}, ${255 - g.value}, ${b.value})`;
 
-  header.style.backgroundColor = color; 
-  header.style.color = invertedColor; 
+  header.style.backgroundColor = color;
+  header.style.color = invertedColor;
   //document.body.style.backgroundColor = color;
 
   const li = document.createElement("li");
   li.textContent = color;
   li.style.backgroundColor = color;
   li.style.color = invertedColor;
-  
 
   lista.appendChild(li);
 });
@@ -90,7 +83,6 @@ b.addEventListener("input", () => {
    `;
 });
 
-
 // Pinta los Sliders
 
 function pintarSliders() {
@@ -101,15 +93,13 @@ function pintarSliders() {
 
 pintarSliders();
 
-
-
 function actualizarColor() {
   const rVal = r.value;
   const gVal = g.value;
   const bVal = b.value;
 
-  createColor.style.backgroundColor = `rgb(${rVal}, ${gVal}, ${bVal})`; 
-  createColor.style.borderColor = `rgb(${rVal - 20}, ${gVal - 20}, ${bVal - 20})`; 
+  createColor.style.backgroundColor = `rgb(${rVal}, ${gVal}, ${bVal})`;
+  createColor.style.borderColor = `rgb(${rVal - 20}, ${gVal - 20}, ${bVal - 20})`;
   //document.body.style.background = `rgb(${rVal}, ${gVal}, ${bVal})`;
 }
 
@@ -120,6 +110,7 @@ b.addEventListener("input", actualizarColor);
 rValue.addEventListener("input", () => {
   if (rValue.value < 0) rValue.value = 0;
   if (rValue.value > 255) rValue.value = 255;
+  if (rValue.value === "") rValue.value = 0;
   r.value = rValue.value;
   actualizarColor();
 });
@@ -127,6 +118,7 @@ rValue.addEventListener("input", () => {
 gValue.addEventListener("input", () => {
   if (gValue.value < 0) gValue.value = 0;
   if (gValue.value > 255) gValue.value = 255;
+  if (gValue.value === "") gValue.value = 0;
   g.value = gValue.value;
   actualizarColor();
 });
@@ -134,28 +126,19 @@ gValue.addEventListener("input", () => {
 bValue.addEventListener("input", () => {
   if (bValue.value < 0) bValue.value = 0;
   if (bValue.value > 255) bValue.value = 255;
+  if (bValue.value === "") bValue.value = 0;
   b.value = bValue.value;
   actualizarColor();
 });
 
-
-
-
-
-
-
-
-
-
-// --------------------------------------------- Deprecado? 
-btnPicker.addEventListener("click", () => {
-  const color = colorPicker.value;
-  //document.body.style.backgroundColor = color;
-
-  const li = document.createElement("li");
-  li.textContent = color;
-  li.style.backgroundColor = color;
-
-  lista.appendChild(li);
+const btnCopyColor = document.querySelector("#btnCopyColor");
+btnCopyColor.addEventListener("click", async () => {
+  const color = `rgb(${r.value}, ${g.value}, ${b.value})`;
+  try {
+    await navigator.clipboard.writeText(color);
+    alert(`Color copiado al portapapeles.`);
+  } catch (err) {
+    console.error("Error al copiar el color al portapapeles", err);
+    alert("Error al copiar el color al portapapeles");
+  }
 });
-// --------------------------------------------- 

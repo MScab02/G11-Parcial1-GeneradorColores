@@ -12,5 +12,7 @@
 
     mix-blend-mode:screen;
 
+    transform-origin: center center;
+    
     z-index: 1;
 }

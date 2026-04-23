@@ -73,7 +73,10 @@
 
 .green-expansion
 {
-    transform: scale(40);
+    transition: transform 2s ease, top 1.5s ease, left 1.5s ease;
+
+    transform: scale(60);
+    left: 50%;
     top: 33%
 
 }

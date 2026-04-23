@@ -9,16 +9,21 @@
   border-radius: 100%;
   background-color:#007AFF;
   color:rgb(255, 255, 255);
+
+  transition: height 0.5s, width 0.5s;
 }
 
   #btnRGB:hover {
-    border: 2px solid #6aadff;
+
+    height:90px;
+    width: 90px;
+    /* border: 2px solid #6aadff; */
     background-color:#499bff;
   }
 
   #btnRGB:active {
     background-color: #58a3ff;;
-    border: 1px solid rgb(16, 166, 216);
+    /* border: 1px solid rgb(16, 166, 216); */
     color: #ade8f4;
     box-shadow: 0;
   }

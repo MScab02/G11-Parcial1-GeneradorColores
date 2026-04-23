@@ -109,6 +109,7 @@ function actualizarColor() {
   const bVal = b.value;
 
   createColor.style.backgroundColor = `rgb(${rVal}, ${gVal}, ${bVal})`; 
+  createColor.style.borderColor = `rgb(${rVal - 20}, ${gVal - 20}, ${bVal - 20})`; 
   //document.body.style.background = `rgb(${rVal}, ${gVal}, ${bVal})`;
 }
 

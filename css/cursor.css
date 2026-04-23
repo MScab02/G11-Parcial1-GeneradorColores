@@ -1,0 +1,18 @@
+.circle
+{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color:rgb(0, 255, 0);
+    border-radius: 100%;
+    top: -30px;
+    left: -30px;
+    pointer-events: none;
+
+    mix-blend-mode:screen;
+
+    transform-origin: center center;
+    
+    z-index: 1;
+}

@@ -1,25 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-button {
-  background-color: #caf0f8;
-  border: 1px solid #caf0f8;
-  padding: 10px;
-  border-radius: 12px;
-  font-family: "Inter", sans-serif;
-  font-weight: 350;
-  font-size: 14px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+#btnRGB {
+  height: 80px;
+  width: 80px;
+  border: none;
+  border-radius: 100%;
+  background-color: #007aff;
+  color: rgb(255, 255, 255);
+
+  transition:
+    height 0.5s,
+    width 0.5s;
 }
 
-button:hover {
-  background-color: #90e0ef;
-  border: 1px solid #90e0ef;
-  color: #023e8a;
+#btnRGB:hover {
+  height: 90px;
+  width: 90px;
+  /* border: 2px solid #6aadff; */
+  background-color: #499bff;
 }
 
-button:active {
-  background-color: #0096c7;
-  border: 1px solid #0096c7;
+#btnRGB:active {
+  background-color: #58a3ff;
+  /* border: 1px solid rgb(16, 166, 216); */
   color: #ade8f4;
+  box-shadow: 0;
+}
+
+#btnCopyColor {
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 100%;
+  background-color: #bebebe;
+  color: rgb(255, 255, 255);
+
+  transition:
+    height 0.5s,
+    width 0.5s;
+}
+
+#btnCopyColor:hover {
+  height: 60px;
+  width: 60px;
+  background-color: #dcdcdc;
+  /* border: 1px solid #f7f7f7; */
+  background-color: #e4e4e4;
+}
+
+#btnCopyColor:active {
+  background-color: #eaeaea;
+  /* border: 1px solid #b4b4b4; */
   box-shadow: 0;
 }

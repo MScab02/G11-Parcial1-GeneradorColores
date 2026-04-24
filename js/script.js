@@ -1,23 +1,20 @@
 // Circulo dentro de panel que cambia de color
 const createColor = document.querySelector("#create-color");
 const header = document.querySelector("#header");
-// ---------------------------------------------
+
+
 // Boton que acepta colores
 const btnRGB = document.querySelector("#btnRGB");
 // Lista donde van colores elegidos
 const lista = document.querySelector("#lista");
-// ---------------------------------------------
 
-// ---------------------------------------------
 // Probablemente deprecado
 // const btnPicker = document.querySelector("#btnPicker");
 
-//
 const r = document.querySelector("#r");
 const g = document.querySelector("#g");
 const b = document.querySelector("#b");
 
-//
 const rValue = document.querySelector("#rValue");
 const gValue = document.querySelector("#gValue");
 const bValue = document.querySelector("#bValue");
@@ -25,6 +22,7 @@ const bValue = document.querySelector("#bValue");
 btnRGB.addEventListener("click", () => {
   const color = `rgb(${r.value}, ${g.value}, ${b.value})`;
   const invertedColor = `rgb(${255 - r.value}, ${255 - g.value}, ${b.value})`;
+  const invertedColor = `rgb(${255 - r.value}, ${255 - g.value}, ${255 - b.value})`;
 
   header.style.backgroundColor = color;
   header.style.color = invertedColor;
@@ -36,6 +34,15 @@ btnRGB.addEventListener("click", () => {
   li.style.color = invertedColor;
 
   lista.appendChild(li);
+
+  /*borrar colores*/
+
+  li.addEventListener("click", () => {
+  li.remove();
+  });
+
+  lista.appendChild(li);
+  
 });
 
 // SINGLE LETTERS STUFF (CREAR BARRA Y ACTUALIZAR VALOR DENTRO DEL INPUT)
@@ -142,3 +149,4 @@ btnCopyColor.addEventListener("click", async () => {
     alert("Error al copiar el color al portapapeles");
   }
 });
+

@@ -1,16 +1,12 @@
-<<<<<<< Updated upstream
-=======
 // Circulo dentro de panel que cambia de color
 const createColor = document.querySelector("#create-color");
 const header = document.querySelector("#header");
-// ---------------------------------------------
+
 // Boton que acepta colores
 const btnRGB = document.querySelector("#btnRGB");
 // Lista donde van colores elegidos
 const lista = document.querySelector("#lista");
-// ---------------------------------------------
 
-// ---------------------------------------------
 // Probablemente deprecado
 // const btnPicker = document.querySelector("#btnPicker");
 
@@ -151,4 +147,4 @@ btnCopyColor.addEventListener("click", async () => {
     alert("Error al copiar el color al portapapeles");
   }
 });
->>>>>>> Stashed changes
+

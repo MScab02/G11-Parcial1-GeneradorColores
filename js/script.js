@@ -21,7 +21,6 @@ const bValue = document.querySelector("#bValue");
 
 btnRGB.addEventListener("click", () => {
   const color = `rgb(${r.value}, ${g.value}, ${b.value})`;
-  const invertedColor = `rgb(${255 - r.value}, ${255 - g.value}, ${b.value})`;
   const invertedColor = `rgb(${255 - r.value}, ${255 - g.value}, ${255 - b.value})`;
 
   header.style.backgroundColor = color;

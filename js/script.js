@@ -159,3 +159,11 @@ btnPicker.addEventListener("click", () => {
   lista.appendChild(li);
 });
 // --------------------------------------------- 
+
+const boton = document.querySelector('#expand');
+boton.addEventListener('click', function(event){
+  setTimeout(function(){
+    header.classList.remove("oculto");
+    main.classList.remove("oculto");
+  }, 1000);
+});

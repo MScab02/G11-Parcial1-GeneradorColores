@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+
+#btnRGB
+{
+  height:80px;
+  width: 80px;
+  border:none;
+  border-radius: 100%;
+  background-color:#007AFF;
+  color:rgb(255, 255, 255);
+
+  transition: height 0.5s, width 0.5s;
+}
+
+  #btnRGB:hover {
+
+    height:90px;
+    width: 90px;
+    /* border: 2px solid #6aadff; */
+    background-color:#499bff;
+  }
+
+  #btnRGB:active {
+    background-color: #58a3ff;;
+    /* border: 1px solid rgb(16, 166, 216); */
+    color: #ade8f4;
+    box-shadow: 0;
+  }
+
+#btnPicker
+{
+  height:50px;
+  width: 50px;
+  border:none;
+  border-radius: 100%;
+  background-color:#bebebe;
+  color:rgb(255, 255, 255);
+
+  transition: height 0.5s, width 0.5s;
+}
+
+  #btnPicker:hover {
+
+    height:60px;
+    width: 60px;
+    background-color: #dcdcdc;
+    /* border: 1px solid #f7f7f7; */
+    background-color:#e4e4e4;
+  }
+
+  #btnPicker:active {
+    background-color: #eaeaea;
+    /* border: 1px solid #b4b4b4; */
+    box-shadow: 0;
+  }

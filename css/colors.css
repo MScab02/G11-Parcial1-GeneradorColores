@@ -26,7 +26,7 @@
 
     background-color: rgb(255, 0, 0);
 
-    z-index: 1;
+    z-index: 0;
 
     mix-blend-mode: screen;
 
@@ -48,7 +48,7 @@
 
     background-color:rgb(0, 0, 255);
 
-    z-index: 1;
+    z-index: 0;
 
     mix-blend-mode: screen;
 
@@ -73,7 +73,10 @@
 
 .green-expansion
 {
-    transform: scale(40);
+    transition: transform 2s ease, top 1.5s ease, left 1.5s ease;
+
+    transform: scale(60);
+    left: 50%;
     top: 33%
 
 }

@@ -5,24 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colores</title>
 
-    <!-- CSS -->
-    
-    <link rel="stylesheet" href="/css/create-color.css">
-    <link rel="stylesheet" href="/css/index.css">
+    <!-- CSS -->    
+    <link rel="stylesheet" href="css/create-color.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/components/button.css">
-    <link rel="stylesheet" href="/css/containers.css">
+    <link rel="stylesheet" href="css/containers.css">
 
     <!-- CSS: Introduccion -->
-    <link rel="stylesheet" href="/css/colors.css">
-    <link rel="stylesheet" href="/css/cursor.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    
     <!-- JAVASCRIPT -->
-
-    <script src="/js/colors.js" defer></script>
-    <script src="/js/script.js" defer></script>
+    <script src="js/colors.js" defer></script>
+    <script src="js/script.js" defer></script>
 
     <!-- JAVASCRIPT: Introduccion -->
-    <script src="/js/create-color.js" defer></script>
-    <script src="/js/cursor.js" defer></script>
+    <script src="js/create-color.js" defer></script>
+    <script src="js/cursor.js" defer></script>
 
 </head>
 
@@ -47,6 +46,10 @@
 
     
     <main>
+
+
+      <div class="color"></div>
+
 
         <div class="main-horizontal-container">
             <div class="vertical-container">
@@ -77,8 +80,12 @@
                         <div id="create-color"></div>
                     </div>
                     <div class="horizontal-container">
-                        <button id="btnRGB" class="accept-button">Aceptar</button>
-                        <button id="btnPicker">🜂</button>
+                        <button id="btnRGB" title="Aceptar" class="accept-button">
+                          <img src="assets/img/accept.png" alt="Aceptar" style="width: 40px; height: 40px;">
+                        </button>
+                        <button id="btnCopyColor" title="Copiar al portapapeles">
+                          <img src="assets/img/copy.png" alt="Copiar" style="width: 30px; height: 30px;">
+                        </button>
                     </div>
 
                 </div>
@@ -86,10 +93,12 @@
 
         </div>
 
-
       <ul id="lista"></ul>
 
       <script src="./js/script.js"></script>
+ 
+      <ul id="lista"></ul>
+
     </main>
     <footer>
       <p>2J3M - P3: Primer parcial - 2026</p>

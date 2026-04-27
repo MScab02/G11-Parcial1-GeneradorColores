@@ -154,8 +154,8 @@ const main = document.querySelector('main');
 const boton = document.querySelector('#expand');
 boton.addEventListener('click', function(event){
   setTimeout(function(){
-    header.classList.remove('oculto');
-    main.classList.remove('oculto');
+    header.classList.remove('oculto', 'animar');
+    main.classList.remove('oculto', 'animar');
 
     setTimeout(() => {
       header.classList.add('mostrar');

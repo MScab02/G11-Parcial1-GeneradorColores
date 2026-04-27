@@ -14,6 +14,7 @@ const lista = document.querySelector("#lista");
 const r = document.querySelector("#r");
 const g = document.querySelector("#g");
 const b = document.querySelector("#b");
+
 const rValue = document.querySelector("#rValue");
 const gValue = document.querySelector("#gValue");
 const bValue = document.querySelector("#bValue");
@@ -150,10 +151,10 @@ btnCopyColor.addEventListener("click", async () => {
 
 // --------------------------------------------- 
 
-const main = document.querySelector('main');
 const boton = document.querySelector('#expand');
 boton.addEventListener('click', function(event){
   setTimeout(function(){
+<<<<<<< HEAD
     header.classList.remove('oculto', 'animar');
     main.classList.remove('oculto', 'animar');
 
@@ -162,5 +163,9 @@ boton.addEventListener('click', function(event){
       main.classList.add('mostrar');
     }, 50)
 
+=======
+    header.classList.remove("oculto");
+    main.classList.remove("oculto");
+>>>>>>> parent of 4832591 (Resolución de conflictos, animaciones y cambio en header)
   }, 1000);
 });

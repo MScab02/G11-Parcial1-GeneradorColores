@@ -25,4 +25,4 @@ La interfaz permite previsualizar el color en tiempo real, así como aplicarlo a
   - Introducir el valor deseado en los campos
 - Aplicar el color al header de la página.
 - Mostrar el color aplicado en formato `rgb(#R, #G, #B)`.
-- Copiar el color elegido directamente al portapapeles (en formato `rgb(#R, #G. #B)`) por medio de un botón.
+- Copiar el color elegido directamente al portapapeles (en formato `rgb(#R, #G, #B)`) por medio de un botón.

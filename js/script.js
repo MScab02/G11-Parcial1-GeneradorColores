@@ -14,7 +14,6 @@ const lista = document.querySelector("#lista");
 const r = document.querySelector("#r");
 const g = document.querySelector("#g");
 const b = document.querySelector("#b");
-
 const rValue = document.querySelector("#rValue");
 const gValue = document.querySelector("#gValue");
 const bValue = document.querySelector("#bValue");
@@ -151,10 +150,17 @@ btnCopyColor.addEventListener("click", async () => {
 
 // --------------------------------------------- 
 
+const main = document.querySelector('main');
 const boton = document.querySelector('#expand');
 boton.addEventListener('click', function(event){
   setTimeout(function(){
-    header.classList.remove("oculto");
-    main.classList.remove("oculto");
+    header.classList.remove('oculto');
+    main.classList.remove('oculto');
+
+    setTimeout(() => {
+      header.classList.add('mostrar');
+      main.classList.add('mostrar');
+    }, 50)
+
   }, 1000);
 });

@@ -89,3 +89,18 @@ input[type="number"]::-webkit-outer-spin-button {
 .oculto {
   display: none;
 }
+
+.animar {
+  opacity: 0;
+}
+
+@keyframes aparecerAbajo {
+  from{transform: translateY(100px);
+  opacity: 0;}
+  to{ transform: translateY(0);
+  opacity: 1;}
+}
+
+main.mostrar {
+  animation: aparecerAbajo 1s ease forwards;
+}

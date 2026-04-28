@@ -14,14 +14,12 @@ const lista = document.querySelector("#lista");
 const r = document.querySelector("#r");
 const g = document.querySelector("#g");
 const b = document.querySelector("#b");
-
 const rValue = document.querySelector("#rValue");
 const gValue = document.querySelector("#gValue");
 const bValue = document.querySelector("#bValue");
 
 btnRGB.addEventListener("click", () => {
   const color = `rgb(${r.value}, ${g.value}, ${b.value})`;
-  const invertedColor = `rgb(${255 - r.value}, ${255 - g.value}, ${b.value})`;
   const invertedColor = `rgb(${255 - r.value}, ${255 - g.value}, ${255 - b.value})`;
 
   header.style.backgroundColor = color;
@@ -150,3 +148,19 @@ btnCopyColor.addEventListener("click", async () => {
   }
 });
 
+// --------------------------------------------- 
+
+const main = document.querySelector('main');
+const boton = document.querySelector('#expand');
+boton.addEventListener('click', function(event){
+  setTimeout(function(){
+    header.classList.remove('oculto');
+    main.classList.remove('oculto');
+
+    setTimeout(() => {
+      header.classList.add('mostrar');
+      main.classList.add('mostrar');
+    }, 50)
+
+  }, 1000);
+});
